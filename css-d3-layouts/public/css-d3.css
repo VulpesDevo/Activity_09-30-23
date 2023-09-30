@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(232, 230, 230);
+}
+  
+/*** BOX COLORS ***/
+.blue {
+    background-color: rgb(57, 57, 234);
+}
+
+.red {
+    background-color: rgb(248, 80, 80);
+}
+
+.yellow {
+    background-color: rgb(254, 254, 68);
+    border: 3px solid darkorange;
+}
+
+.green {
+    background-color: green;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.lightblue {
+    background-color: lightskyblue;
+}
+
+
+.lightcyan {
+    background-color: lightcyan;
+}
+/*** BOX COLORS ***/
+
+
+section#css-position {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 24rem;
+}
+
+.grid-container {
+    /* position: relative; */
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 1em;
+    border: 0.5rem solid beige;
+    flex-wrap: wrap;
+
+ 
+}
+
+.grid-item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    /** number layout **/
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /** number layout **/
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+
+.active {
+    position: sticky;
+    top: 20px;
+    
+    
+    
+}
+
+
+/* STICKY */
+header {
+    position: sticky;
+    top: 0;
+    text-align:  center;
+    font-size: 2rem;
+    height: 8rem;
+}
+
+h2 {
+    height: 100vh;
+}
+
+
+
+/*FLEXBOX*/
+
+.flex-between {
+    height: 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: start;
+    border: 0.2rem solid black;
+    margin-bottom: 1rem;
+
+}
+
+
+.flex-item {
+    background-color: lightskyblue;
+    width: 12rem; /*150px*/
+    height: 3rem;
+    text-align: center;
+    border: 2px solid blue;
+}
+
+.flex-item:first-child {
+    
+}
+
+.flex-item:nth-child(2) {
+    align-self: center;
+}
+
+.flex-item:last-child {
+    
+    
+}
+/** DEMO **/
+
+.flexbox-main {
+    display: flex;
+    width: 100vw;
+    justify-content: start;
+    background-color: darkgray;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+.image-logo {
+    
+}
+.flexbox-grow {
+    flex-grow: 2;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+}
+
+ul li {
+    list-style-type: none;
+    color: green;
+}
+
+
+/* GRID */
+section#grid-layout{
+    height: 100vh;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 88%;
+    height: 88%;
+    border: 3px solid black;
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.item-1{
+    border: 20px solid rgba(145, 8, 152, 0.552); 
+    background-color: blueviolet;
+    grid-row: 1/4;
+}
+.item-2{
+    background-color: rgb(109, 104, 203);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 2/4;
+    grid-row:1/1;
+
+}
+.item-3{
+    background-color: rgb(212, 212, 45);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 4/4;
+    grid-row:1/1;
+}
+
+.item-4{
+    background-color: rgb(226, 147, 43);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 2/2;
+    grid-row:2/2;
+}
+.item-5{
+    background-color: rgb(226, 43, 119);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 3/4;
+    grid-row:2/2;
+}
+.item-6{
+    background-color: rgb(9, 97, 148);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 4/4;
+    grid-row: 2/4;
+}
+.item-7{
+    background-color: rgb(36, 225, 93);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 2/2;
+    grid-row:3/3;
+}
+
+.item-8{
+    background-color: rgb(35, 74, 211);
+    border: 20px solid rgba(145, 8, 152, 0.552);
+    grid-column: 3/3;
+    grid-row:3/3;
+}
+
+.container1{
+    width: 88vw;
+    height: 88vh;
+    border: 3px solid black;
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: 
+    "area-1 area-1 area-1"
+    "area-2 area-3 area-4"
+    "area-5 area-5 area-4"
+    ;
+}
+
+.area-1{
+    background-color: rgb(65, 62, 62);
+    border-radius: .5rem;
+    grid-area: area-1;
+}
+.area-2{
+    background-color: rgb(104, 101, 101);
+    border-radius: .5rem;
+    grid-area: area-2;
+}
+
+.area-3{
+    background-color: rgb(48, 47, 47);
+    border-radius: .5rem;
+    grid-area: area-3;
+}
+.area-4{
+    background-color: rgb(104, 101, 101);
+    border-radius: .5rem;
+    grid-area: area-4;
+}
+.area-5{
+    background-color: rgb(65, 62, 62);
+    border-radius: .5rem;
+    grid-area: area-5;
+}
+/* GRID ALIGN */
+
+/* GRID TEMPLATING */
+
+/* GRID ACTIVITY */
+
+
+
+
